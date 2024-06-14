@@ -21,9 +21,14 @@ class Restaurante:
     @property
     def ativo(self):
         return '⌧' if self._ativo else '☐'
+    
+    def alternar_status(self):
+        self._ativo=not self._ativo
 
 restaurante_praca=Restaurante('Praça','Gourmet')
 restaurante_pizza=Restaurante('Pizza Express','Italiana')
+
+restaurante_praca.alternar_status()
 
 # restaurantes=[restaurante_praca,restaurante_pizza]
 
